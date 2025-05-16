@@ -9,6 +9,22 @@ const AddTshirt = () => {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         console.log(data);
+
+
+        fetch('http://localhost:3000/tshirts', {
+          method: 'POST',
+          headers:{
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(data)
+        })
+          .then(res => res.json())
+          .then(data => {
+            if(data.insertedId){
+              alert('new Tshirt added successfully')
+            }
+          })
+
     }
 
   return (
