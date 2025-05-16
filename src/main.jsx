@@ -11,6 +11,7 @@ import Login from './components/login.jsx';
 import Register from './components/Register.jsx';
 import UpdateTshirt from './components/updateTshirt.jsx';
 import AddTshirt from './components/addTshirt.jsx';
+import Tshirts from './components/Tshirts.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
       {
         path: 'addTshirt',
         element: <AddTshirt></AddTshirt>,
+      },
+      {
+        path: 'tshirt',
+        loader: () => fetch('http://localhost:3000/tshirts'),
+        element: <Tshirts></Tshirts>,
       }
     ]
   },
