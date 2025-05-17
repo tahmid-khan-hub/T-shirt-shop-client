@@ -32,7 +32,7 @@ const Tshirts = () => {
                 <p>Quantity: {clothes.quantity}</p>
                 <div className="card-actions justify-end">
                   <Link to={`viewTshirt/${clothes._id}`}><button className="btn btn-primary">View</button></Link>
-                  <button className="btn btn-primary">Edit</button>
+                  <Link to={`updateTshirt/${clothes._id}`}><button className="btn btn-primary">Edit</button></Link>
                   <button onClick={handleDelete} className="btn btn-primary">Delete</button>
                 </div>
               </div>

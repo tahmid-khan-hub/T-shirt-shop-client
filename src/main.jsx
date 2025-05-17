@@ -28,7 +28,8 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: 'updateTshirt',
+        path: 'tshirt/updateTshirt/:id',
+        loader: () => fetch(`http://localhost:3000/tshirts`),
         element: <UpdateTshirt></UpdateTshirt>,
       },
       {
