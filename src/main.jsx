@@ -14,6 +14,7 @@ import UpdateTshirt from './components/updateTshirt.jsx';
 import AddTshirt from './components/addTshirt.jsx';
 import Tshirts from './components/Tshirts.jsx';
 import TshirtDetails from './components/TshirtDetails.jsx';
+import AuthProvider from './context/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
