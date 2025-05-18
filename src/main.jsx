@@ -15,6 +15,7 @@ import AddTshirt from './components/addTshirt.jsx';
 import Tshirts from './components/Tshirts.jsx';
 import TshirtDetails from './components/TshirtDetails.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
+import Users from './components/Users.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
         path: 'tshirt/viewTshirt/:id',
         loader: () => fetch('http://localhost:3000/tshirts'),
         element: <TshirtDetails></TshirtDetails>,
+      },
+      {
+        path: 'users',
+        loader: () => fetch('http://localhost:3000/users'),
+        element: <Users></Users>
       }
     ]
   },
