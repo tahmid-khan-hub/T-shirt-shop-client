@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router";
 import Home from './components/Home.jsx';
+import HomeLayout from './layout/HomeLayout.jsx';
 import Login from './components/login.jsx';
 import Register from './components/Register.jsx';
 import UpdateTshirt from './components/updateTshirt.jsx';
@@ -17,7 +18,7 @@ import TshirtDetails from './components/TshirtDetails.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <HomeLayout></HomeLayout>,
     children:[
       {
         path: 'login',
